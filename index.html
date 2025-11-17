@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaus Almeida - Portfólio de Desenvolvimento</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="nav-logo">Klaus Almeida</a>
+            <div class="nav-menu">
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header id="hero" class="hero">
+            <img src="foto-perfil.jpg" alt="Foto de Klaus Almeida" class="hero-foto">
+            <h1 class="hero-nome">Klaus Almeida Souza Santos</h1>
+            <p class="hero-titulo">
+                Graduando em Ciência da Computação | Dev. Back-end, Mobile & Web3 | Residente Restic36
+            </p>
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/klausalmeida/" target="_blank" class="link-social">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/KlausAlmeida1" target="_blank" class="link-social">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
+        </header>
+
+        <section id="projetos" class="projetos">
+            <h2 class="titulo-secao" style="text-align: center; margin-bottom: 40px;">
+                Meus Projetos
+            </h2>
+
+            <div class="card-projeto animate-on-scroll">
+                <img src="print-app.png" alt="Print do App Android de Pagamentos" class="projeto-imagem">
+                <div class="projeto-info">
+                    <h2 class="projeto-titulo">PagamentoMask</h2>
+                    <p class="projeto-descricao">
+                        <strong>O objetivo deste projeto era criar um aplicativo de pagamentos em blockchain (ETH)</strong>. Fui o responsável pela arquitetura e desenvolvimento completo da solução Android. Com base no protótipo de design (Figma), implementei toda a aplicação, incluindo a lógica de UI, a integração com a blockchain e a geração de comprovantes.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="https://youtu.be/_PMYZxXqhNw" target="_blank" class="botao-projeto">
+                            <i class="bi bi-play-circle-fill"></i> Ver Vídeo Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-projeto animate-on-scroll">
+                <img src="print-web.png" alt="Print da Plataforma Pacto Digital" class="projeto-imagem">
+                <div class="projeto-info">
+                    <h2 class="projeto-titulo">Pacto Digital</h2>
+                    <p class="projeto-descricao">
+                        O objetivo deste projeto era <strong>simular o DREX (a futura moeda digital brasileira) em uma plataforma web</strong>. Liderei o desenvolvimento dos contratos inteligentes (Solidity) que dão vida à plataforma, incluindo as lógicas de leilão, aluguel e venda.
+                    </p>
+                    <div class="projeto-links">
+                        <a href="https://projeto-drex-restic36.vercel.app/" target="_blank" class="botao-projeto botao-destaque">
+                            <i class="bi bi-box-arrow-up-right"></i> Acessar Plataforma
+                        </a>
+                        <a href="https://youtu.be/BgSOSn-9abc" target="_blank" class="botao-projeto">
+                            <i class="bi bi-play-circle-fill"></i> Ver Vídeo Apresentação
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> <section id="sobre" class="sobre-section-fullwidth animate-on-scroll">
+        <div class="container"> <div class="sobre-content">
+                <h2 class="titulo-secao">Sobre Mim</h2>
+                <p>
+                    Sou estudante de Ciência da Computação na UESC e Residente de Software no CEPEDI. Minha trajetória na residência foi marcada pela rápida adaptação. Após a 1ª Fase de APIs (Python/Django), a 2ª Fase exigiu um novo conjunto de habilidades.
+                    <br><br>
+                    <strong>Liderei duas frentes técnicas simultâneas:</strong> o desenvolvimento dos contratos inteligentes da plataforma em <strong>Solidity</strong> e a arquitetura da solução mobile em <strong>Kotlin</strong>.
+                    <br><br>
+                    Tudo isso enquanto <strong>exercia o papel de Scrum Master</strong>, conduzindo dailys, gerenciando as sprints, documentando as atas com o PO e garantindo as entregas do time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container"> <footer id="contato" class="rodape">
+            <p>Entre em contato:</p>
+            <div class="rodape-links">
+                <a href="mailto:klaus842@gmail.com" class="link-social">
+                    <i class="bi bi-envelope-fill"></i> klaus842@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/klausalmeida/" target="_blank" class="link-social">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/KlausAlmeida1" target="_blank" class="link-social">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
+        </footer>
+    </div> <script>
+        const elementosParaAnimar = document.querySelectorAll('.animate-on-scroll');
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('is-visible');
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        elementosParaAnimar.forEach(el => {
+            observador.observe(el);
+        });
+    </script>
+
+</body>
+</html>

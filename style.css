@@ -1,0 +1,373 @@
+/* =======================
+   CONFIGURAÇÃO GERAL E TEMA
+   ======================= */
+:root {
+    --cor-fundo: #121212;
+    --cor-card: #1E1E1E;
+    --cor-texto: #E0E0E0;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-destaque: #33D17A;
+    --cor-azul: #007BFF;
+    --cor-azul-hover: #3395ff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =======================
+   SEÇÃO 0: NAVBAR
+   ======================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    box-sizing: border-box; 
+}
+
+.navbar-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--cor-destaque);
+}
+
+
+/* =======================
+   SEÇÃO 1: ABERTURA (HERO)
+   ======================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 80px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-card);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.hero-nome {
+    color: var(--cor-destaque);
+    font-size: 2.2rem;
+    margin: 20px 0 10px 0;
+}
+
+.hero-titulo {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundario);
+    margin: 0;
+    max-width: 600px;
+}
+
+.hero-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* =======================
+   SEÇÃO 2: PROJETOS
+   ======================= */
+.projetos {
+    padding-top: 20px;
+    margin-bottom: 150px; /* Espaço ANTES da seção "Sobre" */
+}
+   
+.card-projeto {
+    background-color: var(--cor-card);
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.projeto-imagem {
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: contain;
+    background-color: #000000;
+}
+
+.projeto-info {
+    padding: 30px;
+}
+
+.projeto-titulo {
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.projeto-descricao {
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+}
+
+.projeto-links {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.botao-projeto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--cor-azul);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.botao-projeto:hover {
+    background-color: var(--cor-azul-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.botao-destaque {
+    background-color: transparent;
+    border: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
+    box-shadow: none;
+}
+.botao-destaque:hover {
+    background-color: var(--cor-azul);
+    color: #ffffff;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+
+/* =======================
+   SEÇÃO 3: SOBRE MIM (NOVO ESTILO)
+   ======================= */
+.titulo-secao {
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Esta é a barra de fundo de tela cheia */
+.sobre-section-fullwidth {
+    background-color: var(--cor-card); /* Fundo da cor do card */
+    padding: 100px 0; /* Espaçamento vertical */
+    margin-bottom: 100px; /* Espaço ANTES do rodapé */
+}
+
+/* Este é o conteúdo (texto) dentro da barra */
+.sobre-content {
+    background-color: transparent; 
+    padding: 0;
+}
+
+.sobre-content p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 0;
+    line-height: 1.7; /* Aumenta o espaçamento entre linhas no "Sobre" */
+}
+
+
+/* =======================
+   SEÇÃO 4: RODAPÉ (COMO ERA ANTES)
+   ======================= */
+.rodape {
+    text-align: center;
+    border-top: 1px solid var(--cor-card);
+    padding: 40px 20px;
+    color: var(--cor-texto-secundario);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rodape p {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-azul);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.link-social:hover {
+    color: var(--cor-azul-hover);
+    text-decoration: underline;
+}
+
+
+/* ===================================
+   ANIMAÇÃO DE SCROLL (CONFIÁVEL)
+   =================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ===================================
+   CORREÇÃO DE "PULO" DO LINK (OFFSET)
+   =================================== */
+#projetos, #sobre, #contato {
+    scroll-margin-top: 100px;
+}
+
+
+/* =======================
+   AJUSTE PARA CELULAR
+   ======================= */
+@media (max-width: 768px) {
+    .nav-logo {
+        display: none;
+    }
+    .navbar-container {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 90vh; 
+        margin-bottom: 60px;
+    }
+    .hero-nome {
+        font-size: 1.8rem;
+    }
+    .hero-titulo {
+        font-size: 1rem;
+    }
+    
+    .projeto-titulo, .titulo-secao {
+        font-size: 1.5rem;
+    }
+
+    .projeto-imagem {
+        height: 300px;
+    }
+
+    .projeto-info {
+        padding: 20px;
+    }
+    
+    .sobre-section-fullwidth {
+        padding: 60px 20px; /* Adicionado padding lateral */
+        margin-bottom: 60px;
+    }
+
+    .projetos {
+        margin-bottom: 80px; 
+    }
+
+    .projeto-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rodape {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .rodape-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
