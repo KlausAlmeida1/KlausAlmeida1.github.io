@@ -22,13 +22,17 @@
     </nav>
 
     <div class="container">
+
         <header id="hero" class="hero">
-            <img src="foto-perfil.jpg" alt="Foto de Klaus Almeida" class="hero-foto">
-            <h1 class="hero-nome">Klaus Almeida Souza Santos</h1>
-            <p class="hero-titulo">
+            <img src="foto-perfil.jpg" alt="Foto de Klaus Almeida" class="hero-foto hero-anim">
+            
+            <h1 class="hero-nome hero-anim delay-1">Klaus Almeida Souza Santos</h1>
+            
+            <p class="hero-titulo hero-anim delay-2">
                 Graduando em Ciência da Computação | Dev. Back-end, Mobile & Web3 | Residente Restic36
             </p>
-            <div class="hero-links">
+            
+            <div class="hero-links hero-anim delay-3">
                 <a href="https://www.linkedin.com/in/klausalmeida/" target="_blank" class="link-social">
                     <i class="bi bi-linkedin"></i> LinkedIn
                 </a>
@@ -36,6 +40,11 @@
                     <i class="bi bi-github"></i> GitHub
                 </a>
             </div>
+
+            <a href="#projetos" class="scroll-indicator hero-anim delay-3">
+                <p>Ver Projetos</p>
+                <i class="bi bi-chevron-down"></i>
+            </a>
         </header>
 
         <section id="projetos" class="projetos">
@@ -44,12 +53,49 @@
             </h2>
 
             <div class="card-projeto animate-on-scroll">
-                <img src="print-app.png" alt="Print do App Android de Pagamentos" class="projeto-imagem">
+                <img src="foto-cape.jpg" alt="Equipe do Projeto CAPE Grapiúna" class="projeto-imagem" style="object-position: center;">
+                
                 <div class="projeto-info">
-                    <h2 class="projeto-titulo">PagamentoMask</h2>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px;">
+                        <h2 class="projeto-titulo" style="margin-bottom: 0;">Sistema de Gestão Pedagógica (CAPE)</h2>
+                        <span style="background-color: #FFC107; color: #000; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">EM ANDAMENTO</span>
+                    </div>
+
                     <p class="projeto-descricao">
-                        <strong>O objetivo deste projeto era criar um aplicativo de pagamentos em blockchain (ETH)</strong>. Fui o responsável pela arquitetura e desenvolvimento completo da solução Android. Com base no protótipo de design (Figma), implementei toda a aplicação, incluindo a lógica de UI, a integração com a blockchain e a geração de comprovantes.
+                        Lidero uma equipe voluntária de 5 desenvolvedores na criação de uma solução web para o Centro de Apoio Pedagógico Especializado (CAPE). O sistema incluirá um portal de eventos e uma ferramenta de automação de relatórios pedagógicos para facilitar o trabalho dos professores.
                     </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Liderança Técnica</span>
+                        <span class="tech-tag">Engenharia de Requisitos</span>
+                        <span class="tech-tag">Arquitetura de Software</span>
+                        <span class="tech-tag">Voluntariado</span>
+                    </div>
+
+                    <div class="projeto-links">
+                        <span class="botao-projeto" style="background-color: #333; cursor: default; box-shadow: none;">
+                            <i class="bi bi-cone-striped"></i> Em Desenvolvimento
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-projeto animate-on-scroll">
+                <img src="print-app.jpg" alt="Gateway de Pagamentos Blockchain" class="projeto-imagem">
+                <div class="projeto-info">
+                    <h2 class="projeto-titulo">App Android de Pagamentos (ETH)</h2>
+                    <p class="projeto-descricao">
+                        <strong>O objetivo deste projeto era criar um aplicativo de pagamentos em blockchain (ETH).</strong> Fui o responsável pela arquitetura e desenvolvimento completo da solução Android. Com base no protótipo de design (Figma), implementei toda a aplicação, incluindo a lógica de UI, a integração com a blockchain e a geração de comprovantes.
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Android Native</span>
+                        <span class="tech-tag">Web3j</span>
+                        <span class="tech-tag">Infura RPC</span>
+                        <span class="tech-tag">Deep Link</span>
+                    </div>
+
                     <div class="projeto-links">
                         <a href="https://youtu.be/_PMYZxXqhNw" target="_blank" class="botao-projeto">
                             <i class="bi bi-play-circle-fill"></i> Ver Vídeo Demo
@@ -59,12 +105,22 @@
             </div>
 
             <div class="card-projeto animate-on-scroll">
-                <img src="print-web.png" alt="Print da Plataforma Pacto Digital" class="projeto-imagem">
+                <img src="print-web.jpg" alt="Print da Plataforma Pacto Digital" class="projeto-imagem">
                 <div class="projeto-info">
-                    <h2 class="projeto-titulo">Pacto Digital</h2>
+                    <h2 class="projeto-titulo">Simulador DREX & Smart Contracts</h2>
                     <p class="projeto-descricao">
-                        O objetivo deste projeto era <strong>simular o DREX (a futura moeda digital brasileira) em uma plataforma web</strong>. Liderei o desenvolvimento dos contratos inteligentes (Solidity) que dão vida à plataforma, incluindo as lógicas de leilão, aluguel e venda.
+                        O objetivo deste projeto era <strong>simular o DREX (a futura moeda digital brasileira) em uma plataforma web.</strong> Liderei o desenvolvimento dos contratos inteligentes (Solidity) que dão vida à plataforma, incluindo as lógicas de leilão, aluguel e venda.
                     </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Solidity</span>
+                        <span class="tech-tag">Ethers.js</span>
+                        <span class="tech-tag">Smart Contracts</span>
+                        <span class="tech-tag">Hardhat</span>
+                    </div>
+
                     <div class="projeto-links">
                         <a href="https://projeto-drex-restic36.vercel.app/" target="_blank" class="botao-projeto botao-destaque">
                             <i class="bi bi-box-arrow-up-right"></i> Acessar Plataforma

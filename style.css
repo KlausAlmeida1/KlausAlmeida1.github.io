@@ -124,13 +124,61 @@ body {
     gap: 20px;
 }
 
+/* ===================================
+   INDICADOR DE SCROLL (SETA)
+   =================================== */
+.scroll-indicator {
+    margin-top: 60px;
+    animation: bounce 2s infinite;
+    opacity: 0.8;
+    
+    /* CORREÇÃO DO SUBLINHADO ROXO */
+    text-decoration: none;       /* Remove a linha de baixo */
+    color: var(--cor-texto-secundario); /* Força a cor cinza (tira o roxo de visitado) */
+    
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+/* Garante que o roxo não volte mesmo depois de clicar */
+.scroll-indicator:visited, .scroll-indicator:active, .scroll-indicator:focus {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+    color: var(--cor-destaque); /* (Opcional) Fica verde quando passa o mouse */
+}
+
+.scroll-indicator p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: inherit; /* Herda a cor do pai */
+    margin-bottom: 5px;
+}
+
+.scroll-indicator i {
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
 
 /* =======================
    SEÇÃO 2: PROJETOS
    ======================= */
 .projetos {
     padding-top: 20px;
-    margin-bottom: 150px; /* Espaço ANTES da seção "Sobre" */
+    margin-bottom: 150px; 
 }
    
 .card-projeto {
@@ -168,6 +216,25 @@ body {
 .projeto-descricao {
     font-size: 1rem;
     color: var(--cor-texto-secundario);
+}
+
+/* NOVO: TAGS DE STACK */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+
+.tech-tag {
+    background-color: rgba(51, 209, 122, 0.1); /* Fundo verde clarinho */
+    color: var(--cor-destaque); /* Texto verde */
+    border: 1px solid var(--cor-destaque); /* Borda verde fina */
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .projeto-links {
@@ -212,7 +279,7 @@ body {
 
 
 /* =======================
-   SEÇÃO 3: SOBRE MIM (NOVO ESTILO)
+   SEÇÃO 3: SOBRE MIM (EM TELA CHEIA)
    ======================= */
 .titulo-secao {
     color: var(--cor-destaque);
@@ -221,14 +288,12 @@ body {
     margin-bottom: 20px;
 }
 
-/* Esta é a barra de fundo de tela cheia */
 .sobre-section-fullwidth {
-    background-color: var(--cor-card); /* Fundo da cor do card */
-    padding: 100px 0; /* Espaçamento vertical */
-    margin-bottom: 100px; /* Espaço ANTES do rodapé */
+    background-color: var(--cor-card);
+    padding: 100px 0;
+    margin-bottom: 100px;
 }
 
-/* Este é o conteúdo (texto) dentro da barra */
 .sobre-content {
     background-color: transparent; 
     padding: 0;
@@ -238,19 +303,18 @@ body {
     font-size: 1.1rem;
     color: var(--cor-texto-secundario);
     margin-bottom: 0;
-    line-height: 1.7; /* Aumenta o espaçamento entre linhas no "Sobre" */
+    line-height: 1.7;
 }
 
 
 /* =======================
-   SEÇÃO 4: RODAPÉ (COMO ERA ANTES)
+   SEÇÃO 4: RODAPÉ
    ======================= */
 .rodape {
     text-align: center;
     border-top: 1px solid var(--cor-card);
     padding: 40px 20px;
     color: var(--cor-texto-secundario);
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -291,9 +355,9 @@ body {
 }
 
 
-/* ===================================
-   ANIMAÇÃO DE SCROLL (CONFIÁVEL)
-   =================================== */
+/* =======================
+   ANIMAÇÃO DE SCROLL
+   ======================= */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
@@ -306,9 +370,9 @@ body {
 }
 
 
-/* ===================================
-   CORREÇÃO DE "PULO" DO LINK (OFFSET)
-   =================================== */
+/* =======================
+   CORREÇÃO DE OFFSET
+   ======================= */
 #projetos, #sobre, #contato {
     scroll-margin-top: 100px;
 }
@@ -318,56 +382,107 @@ body {
    AJUSTE PARA CELULAR
    ======================= */
 @media (max-width: 768px) {
-    .nav-logo {
-        display: none;
-    }
-    .navbar-container {
-        justify-content: center;
-    }
+    .nav-logo { display: none; }
+    .navbar-container { justify-content: center; }
 
     .hero {
         min-height: 90vh; 
         margin-bottom: 60px;
     }
-    .hero-nome {
-        font-size: 1.8rem;
-    }
-    .hero-titulo {
-        font-size: 1rem;
-    }
+    .hero-nome { font-size: 1.8rem; }
+    .hero-titulo { font-size: 1rem; }
     
-    .projeto-titulo, .titulo-secao {
-        font-size: 1.5rem;
+    .projeto-titulo, .titulo-secao { font-size: 1.5rem; }
+    .projeto-imagem { height: 300px; }
+    .projeto-info { padding: 20px; }
+    
+    .sobre-section-fullwidth { padding: 60px 20px; margin-bottom: 60px; }
+    .projetos { margin-bottom: 80px; }
+    
+    .projeto-links { flexDirection: column; textAlign: center; }
+    .rodape { flexDirection: column; gap: 25px; }
+    .rodape-links { flexDirection: column; gap: 20px; }
+}
+
+
+/* ===================================
+   ANIMAÇÃO DE ENTRADA DO HERO (CASCATA)
+   =================================== */
+
+/* 1. Define a animação: Começa invisível e embaixo, termina visível e no lugar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Começa 30px para baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Classe base para todos os itens do Hero */
+.hero-anim {
+    opacity: 0; /* Garante que começa invisível */
+    animation: fadeInUp 0.8s ease-out forwards; /* Roda a animação por 0.8s */
+}
+
+/* 3. Os Atrasos (Delays) para criar o efeito "escadinha" */
+.delay-1 {
+    animation-delay: 0.2s; /* Espera um pouquinho */
+}
+
+.delay-2 {
+    animation-delay: 0.4s; /* Espera mais um pouco */
+}
+
+.delay-3 {
+    animation-delay: 0.6s; /* Espera quase tudo */
+}
+
+/* ===================================
+   AJUSTE 4K / ULTRA-WIDE (CORRIGIDO)
+   =================================== */
+@media (min-width: 2500px) {
+    /* 1. Aumenta a fonte base */
+    html {
+        font-size: 32px; 
+    }
+
+    /* 2. Expande o container principal */
+    .container {
+        max-width: 2400px; 
+        padding: 0 40px;
+    }
+
+    /* 3. CORREÇÃO: Aumenta a largura permitida para o texto do Hero */
+    /* Antes estava travado em 600px, agora vai para 1400px para o texto respirar */
+    .hero-titulo {
+        max-width: 1400px; 
+    }
+
+    /* 4. Ajustes de Imagem e Foto */
+    .hero-foto {
+        width: 350px;       /* Foto maior */
+        height: 350px;
+        border-width: 8px;
     }
 
     .projeto-imagem {
-        height: 300px;
+        height: 800px; 
     }
 
-    .projeto-info {
-        padding: 20px;
-    }
-    
+    /* 5. Ajustes de Espaçamento */
     .sobre-section-fullwidth {
-        padding: 60px 20px; /* Adicionado padding lateral */
-        margin-bottom: 60px;
-    }
-
-    .projetos {
-        margin-bottom: 80px; 
-    }
-
-    .projeto-links {
-        flex-direction: column;
-        text-align: center;
+        padding: 200px 0;
     }
     
-    .rodape {
-        flex-direction: column;
-        gap: 25px;
+    .navbar {
+        padding: 30px 60px;
     }
-    .rodape-links {
-        flex-direction: column;
-        gap: 20px;
+    
+    /* 6. Garante que os ícones não fiquem gigantes demais ou desalinhados */
+    .hero-links {
+        gap: 40px;
     }
 }
