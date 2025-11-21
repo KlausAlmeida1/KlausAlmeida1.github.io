@@ -382,28 +382,60 @@ body {
    AJUSTE PARA CELULAR
    ======================= */
 @media (max-width: 768px) {
+    /* 1. Navbar: Esconde logo, centraliza e diminui texto */
     .nav-logo { display: none; }
     .navbar-container { justify-content: center; }
+    .nav-menu { gap: 15px; } /* Menos espaço entre os links */
+    .nav-link { font-size: 0.9rem; } /* Texto do menu menor */
 
+    /* 2. Hero: Ajustes de tamanho */
     .hero {
-        min-height: 90vh; 
+        min-height: 90vh; /* Mantém a altura */
         margin-bottom: 60px;
+        padding: 0 15px; /* Mais margem lateral para não colar na borda */
     }
-    .hero-nome { font-size: 1.8rem; }
-    .hero-titulo { font-size: 1rem; }
     
-    .projeto-titulo, .titulo-secao { font-size: 1.5rem; }
-    .projeto-imagem { height: 300px; }
+    .hero-foto {
+        width: 130px; /* Foto menor (era 160px) */
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .hero-nome {
+        font-size: 1.5rem; /* Fonte menor (era 1.8rem) */
+        line-height: 1.2;  /* Melhora o espaço entre as linhas quando quebra */
+        margin: 10px 0;
+    }
+    
+    .hero-titulo {
+        font-size: 0.95rem; /* Fonte levemente menor */
+        line-height: 1.4;
+        max-width: 100%;    /* Garante que use a largura toda */
+    }
+    
+    /* 3. Ajuste de Títulos Gerais */
+    .projeto-titulo, .titulo-secao { font-size: 1.4rem; }
+    
+    /* 4. Imagens e Cards */
+    .projeto-imagem { height: 250px; } /* Imagem menor para caber na tela */
     .projeto-info { padding: 20px; }
     
-    .sobre-section-fullwidth { padding: 60px 20px; margin-bottom: 60px; }
-    .projetos { margin-bottom: 80px; }
+    /* 5. Seção Sobre Mim */
+    .sobre-section-fullwidth { 
+        padding: 50px 20px; 
+        margin-bottom: 50px; 
+    }
     
-    .projeto-links { flexDirection: column; textAlign: center; }
+    /* 6. Margens Gerais */
+    .projetos { margin-bottom: 60px; }
+    
+    /* 7. Flexbox Vertical para Botões e Rodapé */
+    .projeto-links { flexDirection: column; textAlign: center; width: 100%; }
+    .botao-projeto { justify-content: center; width: 100%; box-sizing: border-box; } /* Botão largura total fica melhor no dedo */
+    
     .rodape { flexDirection: column; gap: 25px; }
-    .rodape-links { flexDirection: column; gap: 20px; }
+    .rodape-links { flexDirection: column; gap: 15px; }
 }
-
 
 /* ===================================
    ANIMAÇÃO DE ENTRADA DO HERO (CASCATA)
@@ -484,5 +516,34 @@ body {
     /* 6. Garante que os ícones não fiquem gigantes demais ou desalinhados */
     .hero-links {
         gap: 40px;
+    }
+}
+
+/* ==================================================
+   AJUSTE FINO PARA TELAS PEQUENAS (iPhone SE, Galaxy Mini)
+   ================================================== */
+@media (max-width: 400px) {
+    /* 1. Nome menor para não quebrar em 3 linhas */
+    .hero-nome {
+        font-size: 1.3rem !important; 
+    }
+
+    /* 2. Foto menor para ganhar espaço vertical */
+    .hero-foto {
+        width: 110px !important;
+        height: 110px !important;
+        margin-bottom: 10px;
+    }
+
+    /* 3. Ajuste do título para ficar proporcional */
+    .hero-titulo {
+        font-size: 0.9rem !important;
+        padding: 0 5px; /* Evita que o texto encoste na borda */
+    }
+
+    /* 4. Garante que o container Hero não fique maior que a tela */
+    .hero {
+        min-height: 85vh; /* Diminui um pouco a altura mínima */
+        padding: 0 10px;
     }
 }
