@@ -382,58 +382,55 @@ body {
    AJUSTE PARA CELULAR
    ======================= */
 @media (max-width: 768px) {
-    /* 1. Navbar: Esconde logo, centraliza e diminui texto */
+    /* 1. Navbar */
     .nav-logo { display: none; }
     .navbar-container { justify-content: center; }
-    .nav-menu { gap: 15px; } /* Menos espaço entre os links */
-    .nav-link { font-size: 0.9rem; } /* Texto do menu menor */
+    .nav-menu { gap: 15px; }
+    .nav-link { font-size: 0.85rem; } 
 
-    /* 2. Hero: Ajustes de tamanho */
+    /* 2. Hero: Mais compacto */
     .hero {
-        min-height: 90vh; /* Mantém a altura */
-        margin-bottom: 60px;
-        padding: 0 15px; /* Mais margem lateral para não colar na borda */
+        min-height: 85vh; /* Reduzi um pouco para garantir que a seta apareça */
+        margin-bottom: 40px;
+        padding: 0 10px; /* Menos padding lateral para o texto ter mais espaço */
     }
     
     .hero-foto {
-        width: 130px; /* Foto menor (era 160px) */
-        height: 130px;
+        width: 120px; /* Reduzi para 120px (antes 130px) */
+        height: 120px;
         margin-bottom: 15px;
     }
 
     .hero-nome {
-        font-size: 1.5rem; /* Fonte menor (era 1.8rem) */
-        line-height: 1.2;  /* Melhora o espaço entre as linhas quando quebra */
+        font-size: 1.3rem; /* Reduzi bastante (era 1.5rem). Vai ficar mais equilibrado. */
+        line-height: 1.3;
         margin: 10px 0;
+        max-width: 300px; /* Força uma quebra de linha mais bonita se precisar */
     }
     
     .hero-titulo {
-        font-size: 0.95rem; /* Fonte levemente menor */
+        font-size: 0.9rem;
         line-height: 1.4;
-        max-width: 100%;    /* Garante que use a largura toda */
+        max-width: 100%;
+        padding: 0 10px;
     }
     
-    /* 3. Ajuste de Títulos Gerais */
-    .projeto-titulo, .titulo-secao { font-size: 1.4rem; }
+    /* 3. Títulos */
+    .projeto-titulo, .titulo-secao { font-size: 1.3rem; }
     
     /* 4. Imagens e Cards */
-    .projeto-imagem { height: 250px; } /* Imagem menor para caber na tela */
-    .projeto-info { padding: 20px; }
+    .projeto-imagem { height: 200px; } /* Imagem menor para não ocupar a tela toda */
+    .projeto-info { padding: 15px; }
     
-    /* 5. Seção Sobre Mim */
-    .sobre-section-fullwidth { 
-        padding: 50px 20px; 
-        margin-bottom: 50px; 
-    }
+    /* 5. Espaçamentos Gerais */
+    .sobre-section-fullwidth { padding: 40px 15px; margin-bottom: 40px; }
+    .projetos { margin-bottom: 50px; }
     
-    /* 6. Margens Gerais */
-    .projetos { margin-bottom: 60px; }
-    
-    /* 7. Flexbox Vertical para Botões e Rodapé */
+    /* 6. Layout Vertical */
     .projeto-links { flexDirection: column; textAlign: center; width: 100%; }
-    .botao-projeto { justify-content: center; width: 100%; box-sizing: border-box; } /* Botão largura total fica melhor no dedo */
+    .botao-projeto { justify-content: center; width: 100%; box-sizing: border-box; }
     
-    .rodape { flexDirection: column; gap: 25px; }
+    .rodape { flexDirection: column; gap: 20px; }
     .rodape-links { flexDirection: column; gap: 15px; }
 }
 
