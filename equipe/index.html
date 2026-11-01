@@ -3,95 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desenvolvimento voluntário — CAPE Grapiúna</title>
-    <meta name="description" content="Equipe que constrói o sistema do CAPE Grapiúna.">
+    <meta name="theme-color" content="#070b14">
+    <title>Nossa equipe — CAPE Grapiúna</title>
+    <meta name="description" content="Conheça a equipe voluntária do projeto CAPE Grapiúna.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="pagina-equipe">
-    <!--
-        Para entrar no time, preencha um dos quatro blocos vazios.
-        Não acrescente um cartão novo: a página já tem as cinco vagas.
-
-        Papel: descreva sua principal contribuição, em qualquer fase do projeto.
-        Código: "Desenvolvimento front-end", "Desenvolvimento back-end".
-        Outras frentes: "Concepção do sistema e ideação", "Levantamento de requisitos",
-        "Apoio estratégico e planejamento", "Testes e validação".
-
-        Foto opcional em equipe/fotos/primeiro-ultimo.jpg
-        (quadrada, até 800 px, cerca de 200 KB).
-        Sem foto, troque o <img> por <span class="inicial" aria-hidden="true">L</span>
-        com a inicial do nome.
-        Links, nesta ordem: e-mail, portfólio e LinkedIn.
-        Quem não tiver um deles, tira só esse.
-        Mantenha o ícone e o aria-label:
-        <a href="mailto:..." aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-        <a href="https://..." aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-    -->
-    <main class="secao">
-        <div class="container">
+<body>
+    <!-- Para atualizar um integrante, edite seu article: nome, foto e contatos.
+         Fotos em equipe/fotos/, com enquadramento próximo do rosto e arquivo otimizado.
+         Contatos na ordem e-mail, portfólio e LinkedIn; omita endereços desconhecidos.
+         Mantenha aria-label e tooltip identificando o contato e o integrante.
+         A apresentação é coletiva, sem descrições individuais de contribuição. -->
+    <main class="container">
+        <header class="apresentacao">
             <p class="eyebrow">CAPE Grapiúna</p>
-            <h1>Desenvolvimento voluntário</h1>
-            <p class="equipe-intro">Equipe que constrói o sistema do CAPE Grapiúna.</p>
-
-            <div class="grade-time">
+            <h1>Nossa equipe</h1>
+            <p class="intro">Conheça a equipe voluntária do projeto CAPE Grapiúna.</p>
+            <a class="link-projeto" href="https://capegrapiuna.com.br/" target="_blank" rel="noopener noreferrer">Conheça o CAPE Grapiúna <span aria-hidden="true">↗</span></a>
+        </header>
+        <section class="grade-time" aria-label="Integrantes da equipe">
                 <article class="pessoa">
-                    <img src="fotos/klaus-almeida.jpg" alt="">
+                    <img src="fotos/klaus-almeida.jpg" alt="" width="160" height="160">
                     <h2>Klaus Almeida</h2>
-                    <p>Arquitetura, Desenvolvimento Full&#8209;Stack e Liderança Técnica.</p>
                     <div class="pessoa-links">
-                        <a href="mailto:klaus842@gmail.com" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-                        <a href="../" aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-                        <a href="https://www.linkedin.com/in/klausalmeida/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <!-- Quatro vagas vazias. Preencha um bloco; não acrescente outro cartão. -->
-                <article class="pessoa">
-                    <span class="inicial" aria-hidden="true">N</span>
-                    <h2>Seu nome</h2>
-                    <p>Sua principal contribuição.</p>
-                    <div class="pessoa-links">
-                        <a href="#" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                        <a href="mailto:klaus842@gmail.com" aria-label="E-mail de Klaus Almeida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg><span class="tooltip" aria-hidden="true">E-mail de Klaus Almeida</span></a>
+                        <a href="../" aria-label="Portfólio de Klaus Almeida"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg><span class="tooltip" aria-hidden="true">Portfólio de Klaus Almeida</span></a>
+                        <a href="https://www.linkedin.com/in/klausalmeida/" aria-label="LinkedIn de Klaus Almeida" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9v11M6 5v.01M11 20V9h4v2c1-3 6-3 6 2v7M15 13v7"/></svg><span class="tooltip" aria-hidden="true">LinkedIn de Klaus Almeida</span></a>
                     </div>
                 </article>
                 <article class="pessoa">
-                    <span class="inicial" aria-hidden="true">N</span>
-                    <h2>Seu nome</h2>
-                    <p>Sua principal contribuição.</p>
+                    <img src="fotos/henrique-daniel.jpg" alt="" width="160" height="160">
+                    <h2>Henrique Daniel</h2>
                     <div class="pessoa-links">
-                        <a href="#" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                        <a href="mailto:danielgoryz008@gmail.com" aria-label="E-mail de Henrique Daniel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg><span class="tooltip" aria-hidden="true">E-mail de Henrique Daniel</span></a>
+
+                        <a href="https://www.linkedin.com/in/hdresende/" aria-label="LinkedIn de Henrique Daniel" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9v11M6 5v.01M11 20V9h4v2c1-3 6-3 6 2v7M15 13v7"/></svg><span class="tooltip" aria-hidden="true">LinkedIn de Henrique Daniel</span></a>
                     </div>
                 </article>
                 <article class="pessoa">
-                    <span class="inicial" aria-hidden="true">N</span>
-                    <h2>Seu nome</h2>
-                    <p>Sua principal contribuição.</p>
+                    <img src="fotos/lucas-ceu.jpg" alt="" width="160" height="160">
+                    <h2>Lucas Céu</h2>
                     <div class="pessoa-links">
-                        <a href="#" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                        <a href="mailto:lukasceu@gmail.com" aria-label="E-mail de Lucas Céu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg><span class="tooltip" aria-hidden="true">E-mail de Lucas Céu</span></a>
+
+                        <a href="https://www.linkedin.com/in/lucas-ceu/" aria-label="LinkedIn de Lucas Céu" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9v11M6 5v.01M11 20V9h4v2c1-3 6-3 6 2v7M15 13v7"/></svg><span class="tooltip" aria-hidden="true">LinkedIn de Lucas Céu</span></a>
                     </div>
                 </article>
                 <article class="pessoa">
-                    <span class="inicial" aria-hidden="true">N</span>
-                    <h2>Seu nome</h2>
-                    <p>Sua principal contribuição.</p>
+                    <img src="fotos/flavia.jpg" alt="" width="160" height="160">
+                    <h2>Flávia</h2>
                     <div class="pessoa-links">
-                        <a href="#" aria-label="E-mail"><i class="bi bi-envelope" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="Portfólio"><i class="bi bi-window" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+                        <a href="mailto:developerflavia@gmail.com" aria-label="E-mail de Flávia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg><span class="tooltip" aria-hidden="true">E-mail de Flávia</span></a>
+
+                        <a href="https://www.linkedin.com/in/fasjesus/" aria-label="LinkedIn de Flávia" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9v11M6 5v.01M11 20V9h4v2c1-3 6-3 6 2v7M15 13v7"/></svg><span class="tooltip" aria-hidden="true">LinkedIn de Flávia</span></a>
                     </div>
                 </article>
-            </div>
-        </div>
+                <article class="pessoa">
+                    <img src="fotos/pablo-cezar.jpg" alt="" width="160" height="160">
+                    <h2>Pablo Cezar</h2>
+                    <div class="pessoa-links">
+                        <a href="mailto:pablitocezar20@gmail.com" aria-label="E-mail de Pablo Cezar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg><span class="tooltip" aria-hidden="true">E-mail de Pablo Cezar</span></a>
+
+                        <a href="https://www.linkedin.com/in/pablo-cezar0/" aria-label="LinkedIn de Pablo Cezar" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9v11M6 5v.01M11 20V9h4v2c1-3 6-3 6 2v7M15 13v7"/></svg><span class="tooltip" aria-hidden="true">LinkedIn de Pablo Cezar</span></a>
+                    </div>
+                </article>
+        </section>
     </main>
 </body>
 </html>
